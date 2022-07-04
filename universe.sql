@@ -81,7 +81,7 @@ ALTER TABLE public.moon OWNER TO freecodecamp;
 
 CREATE TABLE public.planet (
     planet_id integer NOT NULL,
-    name character varying(20 NOT NULL),
+    name character varying(20) NOT NULL,
     type character varying(20),
     atmosphere character varying(10),
     life boolean,
@@ -127,10 +127,10 @@ ALTER TABLE public.star OWNER TO freecodecamp;
 
 INSERT INTO public.galaxy VALUES (1, 'Euclid', 'Norm', 'White', 1, true);
 INSERT INTO public.galaxy VALUES (2, 'Hilbert Dimension', 'Norm-Imperfect', 'Deep Pink', 2, true);
-INSERT INTO public.galaxy VALUES (3, 'Calypso', 'Harsh-Raging', 'Medium Orchid', 3, true);
 INSERT INTO public.galaxy VALUES (4, 'Hesperius Dimension', 'Norm', 'Violet', 4, true);
 INSERT INTO public.galaxy VALUES (5, 'Hyades', 'Norm', 'Light Blue', 5, true);
 INSERT INTO public.galaxy VALUES (6, 'Ickjamatew', 'Norm', 'Turquise', 6, true);
+INSERT INTO public.galaxy VALUES (3, 'Calypso', 'Harsh-Raging', 'Medium Orchid', 3, true);
 
 
 --
@@ -253,19 +253,19 @@ ALTER TABLE ONLY public.planet
 
 
 --
--- Name: ship ships_pkey; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+-- Name: ship ship_pkey; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
 --
 
 ALTER TABLE ONLY public.ship
-    ADD CONSTRAINT ships_pkey PRIMARY KEY (ship_id);
+    ADD CONSTRAINT ship_pkey PRIMARY KEY (ship_id);
 
 
 --
--- Name: ship ships_ship_id_key; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
+-- Name: ship ship_ship_id_key; Type: CONSTRAINT; Schema: public; Owner: freecodecamp
 --
 
 ALTER TABLE ONLY public.ship
-    ADD CONSTRAINT ships_ship_id_key UNIQUE (ship_id);
+    ADD CONSTRAINT ship_ship_id_key UNIQUE (ship_id);
 
 
 --
